@@ -2,7 +2,7 @@ class Header
 {
     namespace?: string;
     classes?: Array<Class>;
-    functions?: Array<Functions>;
+    functions?: Array<Function>;
     fileName: string;
     includes?: Array<string>;
 }
@@ -12,7 +12,7 @@ class Class
     parentClasses?: Array<Class>;
     type?: string;
     className: string;
-    functions?: Array<Functions>;
+    functions?: Array<Function>;
 }
 
 class Function
