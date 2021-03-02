@@ -12,7 +12,8 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.writeimplfile",
-		"onCommand:extension.parsemainfile"
+		"onCommand:extension.parsemainfile",
+		"onCommand:extension.test"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -24,6 +25,10 @@
 			{
 				"command": "extension.parsemainfile",
 				"title": "AUTOCOMPLETE C/C++ FILES: Parse Main File"
+			},
+			{
+				"command": "extension.test",
+				"title": "AUTOCOMPLETE C/C++ FILES: test"
 			}
 		],
 		"configuration": {

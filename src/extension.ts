@@ -1,4 +1,4 @@
-import { ExtensionContext, commands, window, workspace, Position, ViewColumn } from 'vscode'; //import vscode classes and workspace
+import { ExtensionContext, commands, window, workspace, Position, ViewColumn, Uri } from 'vscode'; //import vscode classes and workspace
 import { header, parse, indent } from './parse'; //import parse functions and class
 
 //settings
@@ -17,6 +17,11 @@ export function activate(context: ExtensionContext) {
 
 	context.subscriptions.push(commands.registerCommand('extension.writeimplfile', writeimplfile));
 	context.subscriptions.push(commands.registerCommand('extension.parsemainfile', parsemainfile));
+	context.subscriptions.push(commands.registerCommand('extension.test', async () => {
+		let sas: Uint8Array = await workspace.fs.readFile(Uri.file('../Users/steve/Desktop/autocomplete-c-cpp-files/src/classes.txt'));
+		let stringsas: string = sas.toString();
+		console.log({stringsas});
+	}));
 }
 
 function writeimplfile(): void {

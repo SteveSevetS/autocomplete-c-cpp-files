@@ -23,6 +23,11 @@ function activate(context) {
     console.log('C/C++ autocomplete is running');
     context.subscriptions.push(vscode_1.commands.registerCommand('extension.writeimplfile', writeimplfile));
     context.subscriptions.push(vscode_1.commands.registerCommand('extension.parsemainfile', parsemainfile));
+    context.subscriptions.push(vscode_1.commands.registerCommand('extension.test', () => __awaiter(this, void 0, void 0, function* () {
+        let sas = yield vscode_1.workspace.fs.readFile(vscode_1.Uri.file('../Users/steve/Desktop/autocomplete-c-cpp-files/src/classes.txt'));
+        let stringsas = sas.toString();
+        console.log({ stringsas });
+    })));
 }
 exports.activate = activate;
 function writeimplfile() {
