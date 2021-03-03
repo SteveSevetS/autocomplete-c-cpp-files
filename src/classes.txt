@@ -1,22 +1,29 @@
-class Header
+class Parameter
 {
-    namespace?: string;
-    classes?: Array<Class>;
-    functions?: Array<Function>;
-    fileName: string;
-    includes?: Array<string>;
-}
-
-class Class
-{
-    parentClasses?: Array<Class>;
-    type?: string;
-    className: string;
-    functions?: Array<Function>;
+    type: string;
+    name: string;
 }
 
 class Function
 {
     type: string;
-    name: string;
+    functionName: string;
+    parameters?: Parameter[];
+}
+
+class Class
+{
+    parentClass?: string[]; //string that contains the parent class already formatted
+    type?: string;
+    className: string;
+    functions: Function[];
+}
+
+class Header
+{
+    namespaceName?: string;
+    classes?: Class[];
+    functions?: Function[];
+    fileName: string;
+    includes?: string[];
 }
