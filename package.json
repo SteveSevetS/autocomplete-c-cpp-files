@@ -2,7 +2,7 @@
 	"name": "autocomplete-c-cpp-files",
 	"displayName": "Autocomplete C/C++ files",
 	"description": "This extension will write the implementation of your C/C++ code without make you copy and paste like an idiot",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"engines": {
 		"vscode": "^1.43.0"
 	},
