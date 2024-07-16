@@ -34,7 +34,7 @@ function parse(fileContent) {
             commentBlock = temp.includes('*/') ? false : commentBlock;
         }
         else {
-            if (bracketsCount < 1 || (bracketsCount < 2 && h.namespace)) {
+            if (bracketsCount <= 1 || (bracketsCount <= 2 && h.namespace)) {
                 if (lineHasOpenBracket(temp)) {
                     bracketsCount++;
                 }

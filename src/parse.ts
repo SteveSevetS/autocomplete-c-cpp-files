@@ -32,7 +32,7 @@ export function parse(fileContent: string): header {
         if(commentBlock || lineIsComment(temp)){
             commentBlock = temp.includes('*/') ? false : commentBlock;
         }else{
-            if(bracketsCount < 1 || (bracketsCount < 2 && h.namespace)){
+            if(bracketsCount <= 1 || (bracketsCount <= 2 && h.namespace)){
                 if(lineHasOpenBracket(temp)){
                     bracketsCount++;
                 }
